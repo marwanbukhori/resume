@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marwan Bukhori — Resume</title>
+
+<!-- Font: Source Sans 3 (clean, professional, ATS-friendly).
+     Falls back to system sans-serif if offline. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* =====================================================================
+     PAGE / PRINT SETUP
+     When you open this file in Chrome and choose "Save as PDF",
+     the @page rule controls paper size and margins of the output.
+     Default is US Letter — change to A4 if you prefer.
+     ===================================================================== */
+  @page {
+    size: Letter;          /* or: A4 */
+    margin: 0.5in 0.6in;
+  }
+
+  /* Reset */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.35;
+    color: #111;
+    background: #ececec;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* On-screen "sheet" so the layout previews like a real page.
+     This styling is stripped at print time. */
+  .page {
+    max-width: 8.5in;
+    min-height: 11in;
+    margin: 24px auto;
+    padding: 0.5in 0.6in;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  @media print {
+    body { background: #fff; }
+    .page {
+      margin: 0; padding: 0; box-shadow: none;
+      max-width: none; min-height: 0;
+    }
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ===== Header ===== */
+  header { text-align: center; margin-bottom: 14px; }
+  h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .contact { font-size: 10pt; color: #222; }
+  .contact .sep { margin: 0 6px; color: #888; }
+
+  /* ===== Section ===== */
+  section { margin-top: 12px; }
+  h2 {
+    font-size: 11.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+    page-break-after: avoid;
+  }
+
+  /* ===== Entry block (job, project, education, cert) ===== */
+  .entry { margin-top: 6px; page-break-inside: avoid; }
+  .entry:first-of-type { margin-top: 0; }
+
+  .entry-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .entry-row .left { font-weight: 700; }
+  .entry-row .right {
+    font-size: 10pt;
+    color: #222;
+    white-space: nowrap;
+  }
+  .entry-row.sub .left { font-style: italic; font-weight: 400; }
+  .entry-row.sub .right { font-style: italic; }
+
+  /* ===== Bullet lists ===== */
+  ul {
+    list-style: none;
+    margin-top: 3px;
+    padding-left: 14px;
+  }
+  ul li {
+    position: relative;
+    margin-bottom: 2px;
+    line-height: 1.4;
+  }
+  ul li::before {
+    content: '•';
+    position: absolute;
+    left: -12px;
+    color: #111;
+  }
+
+  /* ===== Technical Skills (label + list) ===== */
+  .skills p { margin-bottom: 3px; line-height: 1.4; }
+  .skills strong { font-weight: 700; }
+
+  /* ===== Project title with stack on same line ===== */
+  .project-title { font-weight: 700; margin-bottom: 2px; }
+  .project-title .stack {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 10pt;
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ====================== HEADER ====================== -->
+  <header>
+    <h1>Marwan Bukhori</h1>
+    <div class="contact">
+      Malaysia<span class="sep">|</span>
+      0135961559<span class="sep">|</span>
+      <a href="mailto:marwanbukhori.dev@gmail.com">marwanbukhori.dev@gmail.com</a><span class="sep">|</span>
+      <a href="https://linkedin.com/in/marwanbukhori">linkedin.com/in/marwanbukhori</a><span class="sep">|</span>
+      <a href="https://github.com/marwanbukhori">github.com/marwanbukhori</a><span class="sep">|</span>
+      <a href="https://marwanbukhori.com">marwanbukhori.com</a>
+    </div>
+  </header>
+
+  <!-- ====================== TECHNICAL SKILLS ====================== -->
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <p><strong>Security:</strong> OAuth2, API Rate Limiting, Content Security Policy (CSP), Subresource Integrity (SRI), Web Application Security</p>
+    <p><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, DynamoDB, Redis</p>
+    <p><strong>Languages:</strong> JavaScript, TypeScript, PHP, Python, SQL</p>
+    <p><strong>Methodologies:</strong> Test-Driven Development (TDD), Behavior-Driven Development (BDD), Agile/Scrum</p>
+    <p><strong>Development Tools:</strong> Git, Jira, Confluence, Agile/Scrum, Postman, Power BI, Google Sheets API</p>
+    <p><strong>Messaging &amp; Real-Time:</strong> AWS SNS, AWS SQS, AWS Kinesis, MQTT, Pub/Sub Patterns</p>
+    <p><strong>Cloud &amp; Infrastructure:</strong> AWS (Lambda, ECS, SQS, Kinesis, RDS, DynamoDB, ElastiCache, S3, EC2, CloudWatch, WAF), AWS CDK, Serverless Framework, Docker, Kubernetes, GitLab CI/CD, Supabase</p>
+    <p><strong>Frameworks &amp; Libraries:</strong> NestJS, NextJS, NuxtJS, Laravel, Django, VueJS, ReactNative, Express, Jest, Cypress, TanStackQuery, Zustand, AlpineJS, PrimeVue, Tailwind CSS</p>
+    <p><strong>Architecture &amp; Patterns:</strong> Microservices, Serverless Architecture, Event-Driven Architecture, CQRS, Domain-Driven Design (DDD), Multi-tenant Architecture, Message Queue Patterns</p>
+  </section>
+
+  <!-- ====================== EXPERIENCE ====================== -->
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-row"><span class="left">Planned Career Break</span><span class="right">Apr 2026 – Present</span></div>
+      <div class="entry-row sub"><span class="left">Self-Directed &amp; Freelance</span><span class="right">Malaysia</span></div>
+      <ul>
+        <li>Developed Rerumah, a bilingual (Malay-first) Progressive Web App for Malaysian landlords managing tenancies, billing, payments, and agreements on Supabase backend, deployed at rerumah.my</li>
+        <li>Delivered Malaysia Labour Market Dashboard for SOCSO using Power BI with complex DAX measures and data modeling across 6 analysis themes including salary gap analysis and skills demand mapping</li>
+        <li>Built CommitGarden, a gamified habit tracker with pixel-art ecosystem featuring virtual pet system to reinforce habit streaks and user consistency</li>
+        <li>Collaborated on digital agency project in education domain, developing landing page (studyatinnovative.my) and coordinating with marketing teams on student acquisition campaigns</li>
+        <li>Implemented agentic AI workflow using Claude with research-plan-implement methodology and markdown-based knowledge base system for continuous learning optimization</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row"><span class="left">Software Engineer – Security Contract</span><span class="right">Feb 2026 – Apr 2026</span></div>
+      <div class="entry-row sub"><span class="left">Geomotion (Malaysia) Sdn. Bhd.</span><span class="right">Malaysia</span></div>
+      <ul>
+        <li>Executed security hardening across 6 microservices repositories to remediate critical BHP audit findings, implementing API rate limiting, WAF ruleset configuration, and hardened HTTP security headers</li>
+        <li>Strengthened CI/CD pipeline security by introducing automated code-scanning tools including Grype, GitLab SAST, and pip-audit across all deployment stages</li>
+        <li>Implemented Content Security Policy (CSP) and Subresource Integrity (SRI) standards to strengthen web application security posture and prevent cross-site vulnerabilities</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row"><span class="left">Software Engineer – Fullstack</span><span class="right">Aug 2024 – Feb 2026</span></div>
+      <div class="entry-row sub"><span class="left">Silentmode Sdn. Bhd.</span><span class="right">Malaysia</span></div>
+      <ul>
+        <li>Developed subsidy RON95 transaction and payment processing features for POS system with CDB team integration, handling 800k daily user subsidy transactions across fuel stations nationwide using NestJS with TDD pattern, Jest, MongoDB, and Docker</li>
+        <li>Architected and deployed E-Invoice System (EIS) microservice from scratch using event-driven architecture with AWS SQS, ECS, Lambda, and DynamoDB, implementing CQRS and Domain-Driven Design patterns to process e-invoice submissions for LHDN integration</li>
+        <li>Developed virtual loyalty point integration features in receipt module and MyDebit card transaction support through collaboration with Invenco team for BHPetrol client</li>
+        <li>Built e-invoice submission module with creation, processing, and LHDN API submission features utilizing message queue patterns and event-driven architecture on AWS ECS</li>
+        <li>Owned support tickets, hotfixes, and deployments for Hub and EIS systems, ensuring 99.9% uptime across production environments</li>
+        <li>Designed full-stack frontend using VueJS (PrimeVue library) and backend features on NestJS and AWS Serverless infrastructure</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row"><span class="left">Junior Software Engineer / CloudBOS Developer</span><span class="right">2023 – 2024</span></div>
+      <div class="entry-row sub"><span class="left">Terato Tech Sdn. Bhd.</span><span class="right">Malaysia</span></div>
+      <ul>
+        <li>Outsourced to Silentmode Sdn. Bhd. as CloudBOS Developer</li>
+        <li>Developed multiple reporting features on CloudBOS including fuel totalizer and sales movement reports deployed nationwide across Petronas, SHELL, and BHPetrol stations, serving 1000+ stations</li>
+        <li>Designed and deployed Electronic Shelf Label (ESL) system for in-store item purchase across nationwide fuel stations with dynamic PDF/Excel generation</li>
+        <li>Enhanced planogram generation features to support dynamic customization including width, height, and custom input parameters for fuel station owners</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row"><span class="left">Software Engineer Intern</span><span class="right">2022 – 2023</span></div>
+      <div class="entry-row sub"><span class="left">Terato Tech Sdn. Bhd.</span><span class="right">Malaysia</span></div>
+      <ul>
+        <li>Developed frontend landing page for KitaJaga website supporting seasonal campaigns including SemakHarga campaign</li>
+        <li>Built Betaqwa Mobile App MVP from scratch using ReactNative and Expo with end-to-end features including Search Masjid, Masjid Listing, Kuliah Listing, Masjid Details Profile, and Follow functionality</li>
+        <li>Implemented kuliah data import feature in Betaqwa CMS utilizing Google Sheets API integration to optimize admin workflows</li>
+        <li>Resolved critical bugs across frontend and backend modules including email delivery failures, modal rendering issues, and unhandled error exceptions blocking user flows</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== PROJECTS ====================== -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="project-title">E-Invoice System (EIS) <span class="stack">| NestJS, VueJS, AWS ECS, AWS SQS, AWS Lambda, AWS DynamoDB, AWS Kinesis, LHDN API, TypeScript, Docker, Domain-Driven Design, CQRS, Event-Driven Architecture</span></div>
+      <ul>
+        <li>Architected serverless microservice on AWS ECS implementing CQRS, Domain-Driven Design, and event-driven architecture using AWS SQS, Lambda, and DynamoDB for e-invoicing solution</li>
+        <li>Developed end-to-end e-invoice submission module with creation, processing, and LHDN API integration utilizing message queue patterns and asynchronous event handling</li>
+        <li>Built responsive frontend using VueJS and PrimeVue library with real-time state synchronization</li>
+        <li>Implemented for fuel retailers as part of RONPOS solutions, serving 50+ stations with 10k+ daily invoice submissions</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="project-title">HUB (Fuel POS Backend) <span class="stack">| NestJS, MongoDB, Docker, MQTT, TypeScript, Jest, TDD, Edge Computing, REST APIs</span></div>
+      <ul>
+        <li>Developed core backend for Fuel POS solution with multiple core modules including transaction APIs, receipt creation/processing, pump integrations, and daily operational features</li>
+        <li>Dockerized and deployed locally on edge computing devices with isolated local MongoDB instances synchronized to cloud via MQTT protocol, enabling offline-first operations across 300+ stations</li>
+        <li>Implemented Test-Driven Development with Jest achieving 85%+ code coverage for critical transaction flows</li>
+        <li>Designed real-time data synchronization mechanism using MQTT to upload transactions to CloudBOS AWS infrastructure</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="project-title">CloudBOS (Back Office Reporting System) <span class="stack">| VueJS, Laravel, AWS Aurora, MySQL, AWS EC2, Multi-tenant Architecture, RESTful APIs, Power BI</span></div>
+      <ul>
+        <li>Built multi-tenant reporting dashboard and configuration panels for FuelPOS solution serving Petronas, SHELL, and BHPetrol with isolated data per client</li>
+        <li>Implemented fuel totalizer and sales movement reports deployed nationwide across 500+ fuel stations, processing 50k+ daily transaction records</li>
+        <li>Deployed on AWS EC2 with AWS Aurora MySQL backend supporting 99.9% uptime SLA</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="project-title">Betaqwa (Mosque Management System) <span class="stack">| Laravel, ReactNative, Expo, MySQL, AlpineJS, TanStackQuery, Zustand, Google Sheets API</span></div>
+      <ul>
+        <li>Architected CMS for mosque management using Laravel monolith architecture with MySQL database and AlpineJS frontend</li>
+        <li>Developed ReactNative mobile app using Expo with TanStackQuery and Zustand for state management, featuring Masjid search, listings, kuliah schedules, and follow functionality</li>
+        <li>Implemented Google Sheets API integration for bulk kuliah data import, reducing manual data entry time by 90%</li>
+        <li>Delivered full MVP supporting 20+ mosques across Malaysia</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="project-title">Rerumah (Property Management PWA) <span class="stack">| NextJS, Supabase, PostgreSQL, Tailwind CSS, TypeScript, Progressive Web App, REST APIs</span></div>
+      <ul>
+        <li>Built bilingual (Malay-first) Progressive Web App for Malaysian landlords enabling end-to-end tenancy, billing, payment, and agreement management</li>
+        <li>Architected on Supabase backend with PostgreSQL for real-time data synchronization and offline-first mobile experience</li>
+        <li>Designed lightweight PWA delivering native mobile feel while maintaining &lt;2MB bundle size for low-bandwidth users</li>
+        <li>Deployed production instance at rerumah.my supporting 50+ active properties in beta testing phase</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="project-title">CommitGarden (Gamified Habit Tracker) <span class="stack">| NextJS, TypeScript, Supabase, Tailwind CSS, React Context</span></div>
+      <ul>
+        <li>Designed gamified habit tracking platform converting daily discipline into evolving pixel-art ecosystem with virtual pet system</li>
+        <li>Implemented streak tracking and consistency reinforcement mechanics to improve habit retention</li>
+        <li>Built responsive interface with pixel-art aesthetics and smooth animation transitions</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="project-title">Malaysia Labour Market Dashboard (SOCSO) <span class="stack">| Power BI, DAX, Data Modeling, SQL</span></div>
+      <ul>
+        <li>Delivered comprehensive Labour Market Analytics dashboard for SOCSO implementing complex DAX measures and multi-dimensional data modeling</li>
+        <li>Analyzed 6 themes including salary gap analysis, skills demand mapping, employment trends, and demographic workforce distribution</li>
+        <li>Processed 2M+ employment records with 95%+ data accuracy and real-time refresh capability</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== EDUCATION ====================== -->
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-row">
+        <span class="left">Universiti Kebangsaan Malaysia</span>
+        <span class="right">2019 – 2023</span>
+      </div>
+      <div class="entry-row sub">
+        <span class="left">Bachelor of Software Engineering in Information Systems (GPA: 3.76, First Class Honours)</span>
+        <span class="right"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CERTIFICATIONS (placeholders — fill in or duplicate .entry blocks) ====================== -->
+  <section>
+    <h2>Certifications</h2>
+
+    <div class="entry">
+      <div class="entry-row">
+        <span class="left">[Certification Name]</span>
+        <span class="right">[Year]</span>
+      </div>
+      <div class="entry-row sub">
+        <span class="left">[Issuing Organization] · Credential ID: [Optional]</span>
+        <span class="right"></span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row">
+        <span class="left">[Certification Name]</span>
+        <span class="right">[Year]</span>
+      </div>
+      <div class="entry-row sub">
+        <span class="left">[Issuing Organization] · Credential ID: [Optional]</span>
+        <span class="right"></span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row">
+        <span class="left">[Certification Name]</span>
+        <span class="right">[Year]</span>
+      </div>
+      <div class="entry-row sub">
+        <span class="left">[Issuing Organization] · Credential ID: [Optional]</span>
+        <span class="right"></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

@@ -281,7 +281,9 @@
   <section>
     <h2>Professional Summary</h2>
     <p class="summary">
-      Full-stack software engineer with 4+ years building scalable backend services, event-driven architectures, and enterprise web applications across fuel retail, e-invoicing, and government analytics. Specialized in NestJS, Vue.js, and AWS serverless infrastructure, with production systems serving 1,000+ fuel stations and processing 800K+ daily transactions. Strong record in CQRS, domain-driven design, and security hardening. Open to adjacent platform, DevOps, and data engineering roles.
+      Full-stack software engineer with 4+ years building scalable backend services, event-driven architectures, and enterprise web applications across fuel retail, e-invoicing, intelligence dashboard and government analytics. Specialized in Typescript, Javascript, Python, Laravel PHP and AWS serverless infrastructure, with production systems serving 1,000+ fuel stations and processing 800K+ daily transactions. 
+      <br><br>
+      Strong record in CQRS, domain-driven design, and security hardening. Applied harness-engineering and agentic workflow using Claude Code, Git worktrees, Claude's skill & plugin (Superpower) and currently learning Agent development life cycle using Langchain libaries. Open to immediate opening and adjacent AI-driven engineering, platform, DevOps, and data engineering roles.
     </p>
   </section>
 
@@ -295,7 +297,7 @@
     <div class="skill-row"><span class="skill-label">Messaging</span><span class="skill-list">AWS SNS, AWS SQS, AWS Kinesis, MQTT, Pub/Sub patterns</span></div>
     <div class="skill-row"><span class="skill-label">Architecture</span><span class="skill-list">Microservices, Serverless, Event-Driven, CQRS, Domain-Driven Design (DDD), Multi-tenant, Message Queue patterns</span></div>
     <div class="skill-row"><span class="skill-label">Methodologies</span><span class="skill-list">Test-Driven Development (TDD), Agile/Scrum</span></div>
-    <div class="skill-row"><span class="skill-label">Tools</span><span class="skill-list">Git, Jira, Confluence, Postman, Power BI, Google Sheets API</span></div>
+    <div class="skill-row"><span class="skill-label">Tools</span><span class="skill-list">Claude, MCP, Langchain (Learning) Git, Worktrees, Jira, Confluence, Postman, Power BI, Google Sheets API</span></div>
   </section>
 
   <!-- ====================== EXPERIENCE ====================== -->
@@ -306,9 +308,21 @@
       <div class="entry-row"><span class="left">Software Engineer</span><span class="right">May 2026 – Present</span></div>
       <div class="entry-row sub"><span class="left">Verus Virtus</span><span class="right">Kuala Lumpur, Malaysia</span></div>
       <ul>
-        <li>Building Nexus, an AI-driven network configurator that models enterprise network topologies across physical and logical layers to automate routing and configuration for multi-site deployments</li>
+        <li>Building Nexus, an AI-powered network device management platform that translates natural language into structured CLI commands for switch configuration, executed over SSH with full audit trail, plus a multi-vendor execution engine for non-native switch families via reviewed command templates</li>
+        <li>Setup an open source accounting system called BigCapital for the company's internal use using Nextjs, Postgres, and Tailwind CSS</li>
         <li>Designed and built the company's landing page in Nuxt 3, Vue 3, and TypeScript, with scroll-pinned Three.js scenes (GSAP ScrollTrigger, Lenis) engineered for performance and accessibility</li>
-        <li>Leverage Claude Code with a spec-plan-engineer workflow and multi-step audit and code-review gates, using Conductor to run parallel feature development across git worktrees</li>
+        <li>Involved in intelligence dashboard development comprises of 5 microservices using Nextjs, Postgres, and Shadcn+Tailwind CSS (NDA)</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row"><span class="left">Independent Software Engineer</span><span class="right">Feb 2026 – Present</span></div>
+      <div class="entry-row sub"><span class="left">Self-Directed &amp; Client Work</span><span class="right">Malaysia</span></div>
+      <ul>
+        <li>Built and launched Rerumah (rerumah.my), a bilingual property-management PWA for Malaysian landlords on Next.js and Supabase, handling tenancy, billing, payment, and agreement workflows end-to-end</li>
+        <li>Delivered a Malaysia Labour Market analysis dashboard for SOCSO using Power BI, building a multi-theme DAX semantic model across salary-gap and skills-demand analysis</li>
+        <li>Collaborated with and delivered a landing page for an education agency on marketing coordination for a diploma programme's student acquisition campaign</li>
+        <li>Currently in-progress collaborating and working on an MVP for an autonomous AI-agent agency for a client in the education sector utilizing Langchain libraries</li>
       </ul>
     </div>
 
@@ -361,17 +375,19 @@
     <h2>Projects</h2>
 
     <div class="entry">
-      <div class="project-title">Nexus — AI Network Configurator <span class="stack">| AI/LLM, Network Topology Modeling, VLAN/Subnet Mapping, L2/L3 Routing, NAT</span></div>
+      <div class="project-title">Nexus — AI Network Device Management Platform <span class="stack">| AI/LLM (Claude), SSH Automation, Multi-Vendor CLI Engine, Multi-Tenant SaaS, RBAC, WebSocket</span></div>
       <ul>
-        <li>AI-driven configurator that models enterprise network topologies across both physical (rack, port, floor) and logical (VLAN, subnet) layers</li>
-        <li>Distinguishes L2 aggregation from L3 NAT-boundary devices and handles inline transparent appliances to generate accurate routing and configuration across multi-site client deployments</li>
+        <li>AI-powered platform that translates natural language into structured CLI commands for network switch configuration (Aruba AOS-CX), executing over SSH with a full audit trail and confirmation-gated safety review</li>
+        <li>Built a multi-vendor execution engine extending live operations beyond native AOS-CX to additional switch families via reviewed, template-driven command packs — the model selects a vendor-neutral operation while CLI output is sourced from stored templates, never generated freeform, with a permanent safety floor blocking catastrophic commands</li>
+        <li>Implemented network discovery and snapshot grounding, doc-grounded AI reasoning via the Anthropic Files API, a browser-based SSH terminal (WebSocket/xterm.js), and a live DB-backed metrics dashboard</li>
+        <li>Architected multi-tenant SaaS structure (Organizations → Brands → Locations → Devices) with role-based access control and a hybrid deployment model spanning cloud dashboard, offline/air-gapped local mode, and on-site agent</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="project-title">Verus Virtus — Company Landing Page <span class="stack">| Nuxt 3, Vue 3, TypeScript, Three.js, GSAP ScrollTrigger, Lenis, Tailwind CSS</span></div>
       <ul>
-        <li>Palantir-style instrument-console marketing site for a deep-tech engineering firm, deployed at verusvirtus.com</li>
+        <li>Palantir-style marketing site for a deep-tech engineering firm, deployed at verusvirtus.com</li>
         <li>Scroll-pinned Three.js scenes on a shared single-canvas, single-renderer architecture, with lazy-loaded scene modules, mobile DPR capping, and reduced-motion fallbacks</li>
       </ul>
     </div>
